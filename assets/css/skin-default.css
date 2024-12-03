@@ -14,8 +14,6 @@
 .header-middle-right .header-middle-block .header-mini-cart ul.cart-list li .del-icon:hover,
 .main-header-inner .category-toggle-wrap .category-toggle .cat-icon i,
 .main-header-inner .category-toggle-wrap nav.category-menu>ul>li .category-mega-menu>li>ul li a:hover,
-.main-header-inner .main-menu ul li:hover>a,
-.main-header-inner .main-menu ul li.active>a,
 .main-header-inner.header-2 .mini-cart2 .header-mini-cart ul.cart-list li .cart-info h4 a:hover,
 .main-header-inner.header-2 .mini-cart2 .header-mini-cart ul.cart-list li .cart-info span,
 .main-header-inner.header-2 .mini-cart2 .header-mini-cart ul.cart-list li .del-icon:hover,
@@ -76,6 +74,20 @@
 .footer-bottom-wrap .copyright-text p a {
     color: #007be0 !important;
 }
+
+.main-header-inner {
+    background-color: #007be0 !important;
+}
+
+.main-header-inner .main-menu ul li a {
+    padding: 9px 23.9px;
+}
+
+.main-header-inner .main-menu ul li:hover>a,
+.main-header-inner .main-menu ul li.active>a {
+    color: #00e1ff !important;
+}
+
 
 /*----- theme color css end ----*/
 /*----- background color css start ----*/

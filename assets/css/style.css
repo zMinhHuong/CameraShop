@@ -36,7 +36,7 @@ body {
     font-size: 14px;
     font-weight: 400;
     font-family: "Open Sans", sans-serif;
-    color: #404040;
+    color: #444444;
     line-height: 24px;
 }
 
@@ -1339,7 +1339,7 @@ only screen and (min-width: 768px) and (max-width: 991px) {
 
 @media only screen and (max-width: 767px) {
     .main-header-inner {
-        display: block;
+        display: none;
     }
 }
 
@@ -1768,15 +1768,13 @@ only screen and (max-width: 767px) {
 .main-header-inner .main-menu {
     position: relative;
     -ms-flex-preferred-size: calc(100% - 270px);
-    flex-basis: calc(100% - 270px);
-    border-top: 1px solid #444444;
-    border-right: 1px solid #444444;
+    /* flex-basis: calc(100% - 270px); */
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .main-header-inner .main-menu {
         -ms-flex-preferred-size: calc(100% - 218px);
-        flex-basis: calc(100% - 218px);
+        /* flex-basis: calc(100% - 218px); */
     }
 }
 
@@ -1787,6 +1785,7 @@ only screen and (max-width: 767px) {
 }
 
 .main-header-inner .main-menu ul {
+    background-color: #007be0;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -1801,7 +1800,6 @@ only screen and (max-width: 767px) {
 .main-header-inner .main-menu ul li {
     position: relative;
     padding: 5px 0;
-    border-right: 1px solid #444444;
 }
 
 .main-header-inner .main-menu ul li a {
@@ -1811,6 +1809,7 @@ only screen and (max-width: 767px) {
     font-weight: 700;
     display: block;
     text-transform: uppercase;
+    color: white;
 }
 
 .main-header-inner .main-menu ul li a i {
@@ -1840,7 +1839,6 @@ only screen and (max-width: 767px) {
     opacity: 0;
     visibility: hidden;
     z-index: 99;
-    padding: 20px 0;
     -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     -moz-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
@@ -1857,6 +1855,7 @@ only screen and (max-width: 767px) {
 }
 
 .main-header-inner .main-menu ul li ul.dropdown li a {
+    background-color: #007be0;
     font-size: 14px;
     font-weight: 400;
     text-transform: capitalize;
@@ -2513,11 +2512,11 @@ only screen and (max-width: 767px) {
 }
 
 .mean-container .mean-bar a span {
-    background: #222222;
+    background: #ffffff;
 }
 
 .mean-container .mean-bar a.meanmenu-reveal {
-    color: #222222;
+    color: #ffffff;
 }
 
 @media only screen and (max-width: 767px) {
@@ -2574,7 +2573,7 @@ only screen and (max-width: 767px) {
 }
 
 .mean-container .mean-bar:after {
-    color: #222222;
+    color: #fff;
     content: "MENU";
     font-size: 20px;
     right: 40px;
@@ -3742,7 +3741,7 @@ only screen and (min-width: 768px) and (max-width: 991px) {
     text-align: center;
     line-height: 50px;
     display: block;
-    background-color: #f9af51;
+    background-color: #FF8B08;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
@@ -5169,13 +5168,14 @@ only screen and (max-width: 767px) {
     padding: 8px 10px;
     border: 1px solid #e5e5e5;
     border-bottom: none;
-    background-color: #979898;
+    color:#696969;
+    background-color: #ffffff;
 }
 
 .product-review-info .nav.review-tab li a:hover,
 .product-review-info .nav.review-tab li a.active {
-    color: #404040;
-    background-color: #ffffff;
+    background-color: #007de0;
+    color:#fff;
 }
 
 @media only screen and (max-width: 479px) {

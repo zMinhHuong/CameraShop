@@ -10,6 +10,7 @@
     <link rel="shortcut icon" href="assets/images/logo/favicon.png">
 
     <!-- page css -->
+    <link href="assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet">
     <link href="assets/vendors/datatables/dataTables.bootstrap.min.css" rel="stylesheet">
 
     <!-- Core css -->
@@ -160,6 +161,22 @@
             <div class="side-nav">
                 <div class="side-nav-inner">
                     <ul class="side-nav-menu scrollable">
+                        <li class="nav-item dropdown open">
+                            <a class="dropdown-toggle" href="javascript:void(0);">
+                                <span class="icon-holder">
+                                    <i class="anticon anticon-table"></i>
+                                </span>
+                                <span class="title">Quản lý đơn hàng</span>
+                                <span class="arrow">
+                                    <i class="arrow-icon"></i>
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="active">
+                                    <a href="DonHang.html">Danh sách đơn hàng</a>
+                                </li>
+                            </ul>
+                        </li>
                         <li class="nav-item dropdown">
                             <a class="dropdown-toggle" href="javascript:void(0);">
                                 <span class="icon-holder">
@@ -174,38 +191,6 @@
                                   
                                 <li>
                                     <a href="index.html">Thống kê</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="dropdown-toggle" href="javascript:void(0);">
-                                <span class="icon-holder">
-                                    <i class="anticon anticon-appstore"></i>
-                                </span>
-                                <span class="title">Quản lý tài khoản</span>
-                                <span class="arrow">
-                                    <i class="arrow-icon"></i>
-                                </span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="DanhSachTaiKhoan.html">Danh sách tài khoản</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="dropdown-toggle" href="javascript:void(0);">
-                                <span class="icon-holder">
-									<i class="anticon anticon-build"></i>
-								</span>
-                                <span class="title">Quản lý danh mục</span>
-                                <span class="arrow">
-									<i class="arrow-icon"></i>
-								</span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="DanhMucSanPham.html">Danh mục sản phẩm</a>
                                 </li>
                             </ul>
                         </li>
@@ -231,6 +216,22 @@
                         <li class="nav-item dropdown">
                             <a class="dropdown-toggle" href="javascript:void(0);">
                                 <span class="icon-holder">
+                                    <i class="anticon anticon-appstore"></i>
+                                </span>
+                                <span class="title">Quản lý tài khoản</span>
+                                <span class="arrow">
+                                    <i class="arrow-icon"></i>
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="DanhSachTaiKhoan.html">Danh sách tài khoản</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" href="javascript:void(0);">
+                                <span class="icon-holder">
                                     <i class="anticon anticon-form"></i>
                                 </span>
                                 <span class="title">Quản lý bài viết</span>
@@ -247,23 +248,22 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item dropdown open">
+                        <li class="nav-item dropdown">
                             <a class="dropdown-toggle" href="javascript:void(0);">
                                 <span class="icon-holder">
-                                    <i class="anticon anticon-table"></i>
-                                </span>
-                                <span class="title">Quản lý đơn hàng</span>
+									<i class="anticon anticon-build"></i>
+								</span>
+                                <span class="title">Quản lý danh mục</span>
                                 <span class="arrow">
-                                    <i class="arrow-icon"></i>
-                                </span>
+									<i class="arrow-icon"></i>
+								</span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li class="active">
-                                    <a href="DonHang.html">Danh sách đơn hàng</a>
+                                <li>
+                                    <a href="DanhMucSanPham.html">Danh mục sản phẩm</a>
                                 </li>
                             </ul>
                         </li>
-                         
                     </ul>
                 </div>
             </div>
@@ -286,6 +286,54 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="row m-b-30">
+                                <div class="col-lg-8">
+                                    <div class="form-group" style="max-width: 500px;">
+                                        <div class="d-flex align-items-center">
+                                            <span class="m-r-5 font-weight-semibold text-dark">Từ: </span>
+                                            <div class="input-affix">
+                                                <i class="prefix-icon anticon anticon-calendar"></i>
+                                                <input id="dateFrom" type="text" class="form-control datepicker-input" placeholder="Ngày bắt đầu">
+                                            </div>
+                                            <span class="p-h-10 font-weight-semibold text-dark">-</span>
+                                            <span class="m-r-5 font-weight-semibold text-dark" >Đến: </span>
+                                            <div class="input-affix">
+                                                <i class="prefix-icon anticon anticon-calendar"></i>
+                                                <input type="text" id="dateTo" class="form-control datepicker-input" placeholder="Ngày kết thúc">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-12 col-md-auto mb-2">
+                                                    <button class="btn btn-primary btn-tone w-100">Tất cả</button>
+                                                </div>
+                                                <div class="col-12 col-md-auto mb-2">
+                                                    <button class="btn btn-secondary btn-tone w-100">Chờ xác nhận</button>
+                                                </div>
+                                                <div class="col-12 col-md-auto mb-2">
+                                                    <button class="btn btn-info btn-tone w-100">Đã xác nhận</button>
+                                                </div>
+                                                <div class="col-12 col-md-auto mb-2">
+                                                    <button class="btn btn-warning btn-tone w-100">Đang giao</button>
+                                                </div>
+                                                <div class="col-12 col-md-auto mb-2">
+                                                    <button class="btn btn-success btn-tone w-100">Hoàn thành</button>
+                                                </div>
+                                                <div class="col-12 col-md-auto mb-2">
+                                                    <button class="btn btn-danger btn-tone w-100">Đã hủy</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 text-right">
+                                    <button class="btn btn-primary" data-toggle="modal" data-target=".them-don-hang">
+                                        <i class="anticon anticon-plus-circle m-r-5"></i>
+                                        <span>Thêm đơn hàng</span>
+                                    </button>
+                                </div>
+                            </div>
                             <div class="table-responsive">
                                 <table class="table table-hover e-commerce-table">
                                     <thead>
@@ -301,10 +349,307 @@
                                             <th>Ngày đặt</th>
                                             <th>Tổng tiền</th>
                                             <th>Trạng thái</th>
+                                            <th>Thao tác</th>
                                             <th></th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="checkbox">
+                                                    <input id="check-item-8" type="checkbox">
+                                                    <label for="check-item-8" class="m-b-0"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                #5390
+                                            </td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar avatar-text bg-success avatar-sm m-r-10">
+                                                        <span>H</span>
+                                                    </div>
+                                                    <h6 class="m-b-0">Nguyễn Việt Thắng</h6>
+                                                </div>
+                                            </td>
+                                            <td>16/11/2024</td>
+                                            <td>8.020.000đ</td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="badge badge-secondary badge-dot m-r-10"></div>
+                                                    <div>Chờ xác nhận</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <a href="#" data-toggle="modal" data-target=".thong-tin-don-hang" class="">
+                                                    <span>Xem chi tiết></span>
+                                                </a>
+                                            </td>
+                                            <td class="text-left">
+                                                <button type="button" data-toggle="modal" data-target="#xoa-don-hang" class="btn btn-icon btn-hover btn-sm btn-rounded">
+                                                    <i class="anticon anticon-delete"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="checkbox">
+                                                    <input id="check-item-4" type="checkbox">
+                                                    <label for="check-item-4" class="m-b-0"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                #5365
+                                            </td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar avatar-text bg-primary avatar-sm m-r-10">
+                                                        <span>H</span>
+                                                    </div>
+                                                    <h6 class="m-b-0">Nguyễn Hoàng Hiệp</h6>
+                                                </div>
+                                            </td>
+                                            <td>05/09/2024</td>
+                                            <td>68.599.000đ</td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="badge badge-secondary badge-dot m-r-10"></div>
+                                                    <div>Chờ xác nhận</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <a href="#" data-toggle="modal" data-target=".thong-tin-don-hang" class="">
+                                                    <span>Xem chi tiết></span>
+                                                </a>
+                                            </td>
+                                            <td class="text-left">
+                                                <button type="button" data-toggle="modal" data-target="#xoa-don-hang" class="btn btn-icon btn-hover btn-sm btn-rounded">
+                                                    <i class="anticon anticon-delete"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="checkbox">
+                                                    <input id="check-item-10" type="checkbox">
+                                                    <label for="check-item-10" class="m-b-0"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                #5291
+                                            </td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar avatar-text bg-gray avatar-sm m-r-10">
+                                                        <span>H</span>
+                                                    </div>
+                                                    <h6 class="m-b-0">Nguyễn Thu Hường</h6>
+                                                </div>
+                                            </td>
+                                            <td>10/12/2024</td>
+                                            <td>132.000.000đ</td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="badge badge-secondary badge-dot m-r-10"></div>
+                                                    <div>Chờ xác nhận</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <a href="#" data-toggle="modal" data-target=".thong-tin-don-hang" class="">
+                                                    <span>Xem chi tiết></span>
+                                                </a>
+                                            </td>
+                                            <td class="text-left">
+                                                <button type="button" data-toggle="modal" data-target="#xoa-don-hang" class="btn btn-icon btn-hover btn-sm btn-rounded">
+                                                    <i class="anticon anticon-delete"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="checkbox">
+                                                    <input id="check-item-10" type="checkbox">
+                                                    <label for="check-item-10" class="m-b-0"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                #5291
+                                            </td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar avatar-text bg-gray avatar-sm m-r-10">
+                                                        <span>H</span>
+                                                    </div>
+                                                    <h6 class="m-b-0">Nguyễn Thu Hường</h6>
+                                                </div>
+                                            </td>
+                                            <td>10/12/2024</td>
+                                            <td>132.000.000đ</td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="badge badge-secondary badge-dot m-r-10"></div>
+                                                    <div>Chờ xác nhận</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <a href="#" data-toggle="modal" data-target=".thong-tin-don-hang" class="">
+                                                    <span>Xem chi tiết></span>
+                                                </a>
+                                            </td>
+                                            <td class="text-left">
+                                                <button type="button" data-toggle="modal" data-target="#xoa-don-hang" class="btn btn-icon btn-hover btn-sm btn-rounded">
+                                                    <i class="anticon anticon-delete"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="checkbox">
+                                                    <input id="check-item-10" type="checkbox">
+                                                    <label for="check-item-10" class="m-b-0"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                #5291
+                                            </td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar avatar-text bg-gray avatar-sm m-r-10">
+                                                        <span>H</span>
+                                                    </div>
+                                                    <h6 class="m-b-0">Nguyễn Thu Hường</h6>
+                                                </div>
+                                            </td>
+                                            <td>10/12/2024</td>
+                                            <td>132.000.000đ</td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="badge badge-info badge-dot m-r-10"></div>
+                                                    <div>Đã xác nhận</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <a href="#" data-toggle="modal" data-target=".thong-tin-don-hang" class="">
+                                                    <span>Xem chi tiết></span>
+                                                </a>
+                                            </td>
+                                            <td class="text-left">
+                                                <button type="button" data-toggle="modal" data-target="#xoa-don-hang" class="btn btn-icon btn-hover btn-sm btn-rounded">
+                                                    <i class="anticon anticon-delete"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="checkbox">
+                                                    <input id="check-item-10" type="checkbox">
+                                                    <label for="check-item-10" class="m-b-0"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                #5291
+                                            </td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar avatar-text bg-gray avatar-sm m-r-10">
+                                                        <span>H</span>
+                                                    </div>
+                                                    <h6 class="m-b-0">Nguyễn Thu Hường</h6>
+                                                </div>
+                                            </td>
+                                            <td>10/12/2024</td>
+                                            <td>132.000.000đ</td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="badge badge-info badge-dot m-r-10"></div>
+                                                    <div>Đã xác nhận</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <a href="#" data-toggle="modal" data-target=".thong-tin-don-hang" class="">
+                                                    <span>Xem chi tiết></span>
+                                                </a>
+                                            </td>
+                                            <td class="text-left">
+                                                <button type="button" data-toggle="modal" data-target="#xoa-don-hang" class="btn btn-icon btn-hover btn-sm btn-rounded">
+                                                    <i class="anticon anticon-delete"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="checkbox">
+                                                    <input id="check-item-10" type="checkbox">
+                                                    <label for="check-item-10" class="m-b-0"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                #5291
+                                            </td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar avatar-text bg-gray avatar-sm m-r-10">
+                                                        <span>H</span>
+                                                    </div>
+                                                    <h6 class="m-b-0">Nguyễn Thu Hường</h6>
+                                                </div>
+                                            </td>
+                                            <td>10/12/2024</td>
+                                            <td>132.000.000đ</td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="badge badge-warning badge-dot m-r-10"></div>
+                                                    <div>Đang giao</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <a href="#" data-toggle="modal" data-target=".thong-tin-don-hang" class="">
+                                                    <span>Xem chi tiết></span>
+                                                </a>
+                                            </td>
+                                            <td class="text-left">
+                                                <button type="button" data-toggle="modal" data-target="#xoa-don-hang" class="btn btn-icon btn-hover btn-sm btn-rounded">
+                                                    <i class="anticon anticon-delete"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="checkbox">
+                                                    <input id="check-item-10" type="checkbox">
+                                                    <label for="check-item-10" class="m-b-0"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                #5291
+                                            </td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar avatar-text bg-gray avatar-sm m-r-10">
+                                                        <span>H</span>
+                                                    </div>
+                                                    <h6 class="m-b-0">Nguyễn Thu Hường</h6>
+                                                </div>
+                                            </td>
+                                            <td>10/12/2024</td>
+                                            <td>132.000.000đ</td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="badge badge-warning badge-dot m-r-10"></div>
+                                                    <div>Đang giao</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <a href="#" data-toggle="modal" data-target=".thong-tin-don-hang" class="">
+                                                    <span>Xem chi tiết></span>
+                                                </a>
+                                            </td>
+                                            <td class="text-left">
+                                                <button type="button" data-toggle="modal" data-target="#xoa-don-hang" class="btn btn-icon btn-hover btn-sm btn-rounded">
+                                                    <i class="anticon anticon-delete"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
                                         <tr>
                                             <td>
                                                 <div class="checkbox">
@@ -331,10 +676,12 @@
                                                     <div>Hoàn thành</div>
                                                 </div>
                                             </td>
-                                            <td class="text-right">
-                                                <button type="button" data-toggle="modal" data-target=".thong-tin-don-hang" class="btn btn-icon btn-hover btn-sm btn-rounded pull-right">
-                                                    <i class="anticon anticon-search"></i>
-                                                </button>
+                                            <td>
+                                                <a href="#" data-toggle="modal" data-target=".thong-tin-don-hang" class="">
+                                                    <span>Xem chi tiết></span>
+                                                </a>
+                                            </td>
+                                            <td class="text-left">
                                                 <button type="button" data-toggle="modal" data-target="#xoa-don-hang" class="btn btn-icon btn-hover btn-sm btn-rounded">
                                                     <i class="anticon anticon-delete"></i>
                                                 </button>
@@ -366,10 +713,12 @@
                                                     <div>Hoàn thành</div>
                                                 </div>
                                             </td>
-                                            <td class="text-right">
-                                                <button type="button" data-toggle="modal" data-target=".thong-tin-don-hang" class="btn btn-icon btn-hover btn-sm btn-rounded pull-right">
-                                                    <i class="anticon anticon-search"></i>
-                                                </button>
+                                            <td>
+                                                <a href="#" data-toggle="modal" data-target=".thong-tin-don-hang" class="">
+                                                    <span>Xem chi tiết></span>
+                                                </a>
+                                            </td>
+                                            <td class="text-left">
                                                 <button type="button" data-toggle="modal" data-target="#xoa-don-hang" class="btn btn-icon btn-hover btn-sm btn-rounded">
                                                     <i class="anticon anticon-delete"></i>
                                                 </button>
@@ -401,45 +750,12 @@
                                                     <div>Hoàn thành</div>
                                                 </div>
                                             </td>
-                                            <td class="text-right">
-                                                <button type="button" data-toggle="modal" data-target=".thong-tin-don-hang" class="btn btn-icon btn-hover btn-sm btn-rounded pull-right">
-                                                    <i class="anticon anticon-search"></i>
-                                                </button>
-                                                <button type="button" data-toggle="modal" data-target="#xoa-don-hang" class="btn btn-icon btn-hover btn-sm btn-rounded">
-                                                    <i class="anticon anticon-delete"></i>
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        <tr>
                                             <td>
-                                                <div class="checkbox">
-                                                    <input id="check-item-4" type="checkbox">
-                                                    <label for="check-item-4" class="m-b-0"></label>
-                                                </div>
+                                                <a href="#" data-toggle="modal" data-target=".thong-tin-don-hang" class="">
+                                                    <span>Xem chi tiết></span>
+                                                </a>
                                             </td>
-                                            <td>
-                                                #5365
-                                            </td>
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <div class="avatar avatar-text bg-primary avatar-sm m-r-10">
-                                                        <span>H</span>
-                                                    </div>
-                                                    <h6 class="m-b-0">Nguyễn Hoàng Hiệp</h6>
-                                                </div>
-                                            </td>
-                                            <td>05/09/2024</td>
-                                            <td>68.599.000đ</td>
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <div class="badge badge-primary badge-dot m-r-10"></div>
-                                                    <div>Đang chờ</div>
-                                                </div>
-                                            </td>
-                                            <td class="text-right">
-                                                <button type="button" data-toggle="modal" data-target=".thong-tin-don-hang" class="btn btn-icon btn-hover btn-sm btn-rounded pull-right">
-                                                    <i class="anticon anticon-search"></i>
-                                                </button>
+                                            <td class="text-left">
                                                 <button type="button" data-toggle="modal" data-target="#xoa-don-hang" class="btn btn-icon btn-hover btn-sm btn-rounded">
                                                     <i class="anticon anticon-delete"></i>
                                                 </button>
@@ -471,45 +787,12 @@
                                                     <div>Hoàn thành</div>
                                                 </div>
                                             </td>
-                                            <td class="text-right">
-                                                <button type="button" data-toggle="modal" data-target=".thong-tin-don-hang" class="btn btn-icon btn-hover btn-sm btn-rounded pull-right">
-                                                    <i class="anticon anticon-search"></i>
-                                                </button>
-                                                <button type="button" data-toggle="modal" data-target="#xoa-don-hang" class="btn btn-icon btn-hover btn-sm btn-rounded">
-                                                    <i class="anticon anticon-delete"></i>
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        <tr>
                                             <td>
-                                                <div class="checkbox">
-                                                    <input id="check-item-6" type="checkbox">
-                                                    <label for="check-item-6" class="m-b-0"></label>
-                                                </div>
+                                                <a href="#" data-toggle="modal" data-target=".thong-tin-don-hang" class="">
+                                                    <span>Xem chi tiết></span>
+                                                </a>
                                             </td>
-                                            <td>
-                                                #5311
-                                            </td>
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <div class="avatar avatar-text bg-warning avatar-sm m-r-10">
-                                                        <span>H</span>
-                                                    </div>
-                                                    <h6 class="m-b-0">Dương Công Minh</h6>
-                                                </div>
-                                            </td>
-                                            <td>19/10/2024</td>
-                                            <td>87.200.000đ</td>
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <div class="badge badge-danger badge-dot m-r-10"></div>
-                                                    <div>Đã hủy</div>
-                                                </div>
-                                            </td>
-                                            <td class="text-right">
-                                                <button type="button" data-toggle="modal" data-target=".thong-tin-don-hang" class="btn btn-icon btn-hover btn-sm btn-rounded pull-right">
-                                                    <i class="anticon anticon-search"></i>
-                                                </button>
+                                            <td class="text-left">
                                                 <button type="button" data-toggle="modal" data-target="#xoa-don-hang" class="btn btn-icon btn-hover btn-sm btn-rounded">
                                                     <i class="anticon anticon-delete"></i>
                                                 </button>
@@ -541,45 +824,12 @@
                                                     <div>Hoàn thành</div>
                                                 </div>
                                             </td>
-                                            <td class="text-right">
-                                                <button type="button" data-toggle="modal" data-target=".thong-tin-don-hang" class="btn btn-icon btn-hover btn-sm btn-rounded pull-right">
-                                                    <i class="anticon anticon-search"></i>
-                                                </button>
-                                                <button type="button" data-toggle="modal" data-target="#xoa-don-hang" class="btn btn-icon btn-hover btn-sm btn-rounded">
-                                                    <i class="anticon anticon-delete"></i>
-                                                </button>
-                                            </td>
-                                        </tr>
-                                        <tr>
                                             <td>
-                                                <div class="checkbox">
-                                                    <input id="check-item-8" type="checkbox">
-                                                    <label for="check-item-8" class="m-b-0"></label>
-                                                </div>
+                                                <a href="#" data-toggle="modal" data-target=".thong-tin-don-hang" class="">
+                                                    <span>Xem chi tiết></span>
+                                                </a>
                                             </td>
-                                            <td>
-                                                #5390
-                                            </td>
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <div class="avatar avatar-text bg-success avatar-sm m-r-10">
-                                                        <span>H</span>
-                                                    </div>
-                                                    <h6 class="m-b-0">Nguyễn Việt Thắng</h6>
-                                                </div>
-                                            </td>
-                                            <td>16/11/2024</td>
-                                            <td>8.020.000đ</td>
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <div class="badge badge-primary badge-dot m-r-10"></div>
-                                                    <div>Đang chờ</div>
-                                                </div>
-                                            </td>
-                                            <td class="text-right">
-                                                <button type="button" data-toggle="modal" data-target=".thong-tin-don-hang" class="btn btn-icon btn-hover btn-sm btn-rounded pull-right">
-                                                    <i class="anticon anticon-search"></i>
-                                                </button>
+                                            <td class="text-left">
                                                 <button type="button" data-toggle="modal" data-target="#xoa-don-hang" class="btn btn-icon btn-hover btn-sm btn-rounded">
                                                     <i class="anticon anticon-delete"></i>
                                                 </button>
@@ -611,10 +861,12 @@
                                                     <div>Hoàn thành</div>
                                                 </div>
                                             </td>
-                                            <td class="text-right">
-                                                <button type="button" data-toggle="modal" data-target=".thong-tin-don-hang" class="btn btn-icon btn-hover btn-sm btn-rounded pull-right">
-                                                    <i class="anticon anticon-search"></i>
-                                                </button>
+                                            <td>
+                                                <a href="#" data-toggle="modal" data-target=".thong-tin-don-hang" class="">
+                                                    <span>Xem chi tiết></span>
+                                                </a>
+                                            </td>
+                                            <td class="text-left">
                                                 <button type="button" data-toggle="modal" data-target="#xoa-don-hang" class="btn btn-icon btn-hover btn-sm btn-rounded">
                                                     <i class="anticon anticon-delete"></i>
                                                 </button>
@@ -646,10 +898,49 @@
                                                     <div>Hoàn thành</div>
                                                 </div>
                                             </td>
-                                            <td class="text-right">
-                                                <button type="button" data-toggle="modal" data-target=".thong-tin-don-hang" class="btn btn-icon btn-hover btn-sm btn-rounded pull-right">
-                                                    <i class="anticon anticon-search"></i>
+                                            <td>
+                                                <a href="#" data-toggle="modal" data-target=".thong-tin-don-hang" class="">
+                                                    <span>Xem chi tiết></span>
+                                                </a>
+                                            </td>
+                                            <td class="text-left">
+                                                <button type="button" data-toggle="modal" data-target="#xoa-don-hang" class="btn btn-icon btn-hover btn-sm btn-rounded">
+                                                    <i class="anticon anticon-delete"></i>
                                                 </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="checkbox">
+                                                    <input id="check-item-6" type="checkbox">
+                                                    <label for="check-item-6" class="m-b-0"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                #5311
+                                            </td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar avatar-text bg-warning avatar-sm m-r-10">
+                                                        <span>H</span>
+                                                    </div>
+                                                    <h6 class="m-b-0">Dương Công Minh</h6>
+                                                </div>
+                                            </td>
+                                            <td>19/10/2024</td>
+                                            <td>87.200.000đ</td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="badge badge-danger badge-dot m-r-10"></div>
+                                                    <div>Đã hủy</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <a href="#" data-toggle="modal" data-target=".thong-tin-don-hang" class="">
+                                                    <span>Xem chi tiết></span>
+                                                </a>
+                                            </td>
+                                            <td class="text-left">
                                                 <button type="button" data-toggle="modal" data-target="#xoa-don-hang" class="btn btn-icon btn-hover btn-sm btn-rounded">
                                                     <i class="anticon anticon-delete"></i>
                                                 </button>
@@ -657,7 +948,6 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                            </div>
                             </div>
                         </div>
                     </div>
@@ -677,105 +967,308 @@
                             <div class="modal-body">
                                 <div class="card">
                                     <div class="card-body">
-                                        <div id="invoice" class="p-h-30">
-                                            <div class="m-t-15 lh-2">
-                                                <div class="float-right">
-                                                    <h2>HÓA ĐƠN</h2>
+                                        <div id="invoice" class="p-3">
+                                            <!-- Header -->
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <h2>HÓA ĐƠN</h2>
+                                                <div>
+                                                    <div><span class="font-weight-bold">Mã Hóa Đơn:</span> #5331</div>
+                                                    <div><span class="font-weight-bold">Ngày:</span> 25/07/2024</div>
                                                 </div>
                                             </div>
-                                            <div class="row m-t-20 lh-2">
-                                                <div class="col-sm-9">
-                                                    <address class="p-l-10 m-t-10">
-                                                        <span class="font-weight-semibold text-dark">Nguyễn Văn Hoàng Hiệp.</span><br>
-                                                        <span>Số 34, Ngách 63/22, Ngõ 63 Đường Đại Mỗ</span><br>
-                                                        <span>Phường Đại Mỗ, Quận Nam Từ Liêm, Tp.Hà Nội</span>
-                                                    </address>
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    <div class="m-t-80">
-                                                        <div class="text-dark text-uppercase d-inline-block">
-                                                            <span class="font-weight-semibold text-dark">Mã Hóa Đơn :</span></div>
-                                                        <div class="float-right">#5331</div>
-                                                    </div>
-                                                    <div class="text-dark text-uppercase d-inline-block">
-                                                        <span class="font-weight-semibold text-dark">Ngày :</span>
-                                                    </div>
-                                                    <div class="float-right">25/07/2024</div>
+                                            <!-- Customer Info -->
+                                            <div class="row mt-4">
+                                                <div class="col-md-9">
+                                                    <form>
+                                                        <div class="form-group row">
+                                                            <label for="namehd" class="col-4 col-md-3 col-form-label font-weight-semibold">Tên khách hàng:</label>
+                                                            <div class="col-8 col-md-9">
+                                                                <input type="text" class="form-control" id="namehd" value="Nguyễn Văn Hoàng Hiệp">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label for="phonehd" class="col-4 col-md-3 col-form-label font-weight-semibold">Số điện thoại:</label>
+                                                            <div class="col-8 col-md-9">
+                                                                <input type="number" class="form-control" id="phonehd" value="0963825623">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label for="address" class="col-4 col-md-3 col-form-label font-weight-semibold">Địa chỉ:</label>
+                                                            <div class="col-8 col-md-9">
+                                                                <textarea class="form-control" id="address" rows="4">Số 34, Ngách 63/22, Ngõ 63 Đường Đại MỗPhường Đại Mỗ, Quận Nam Từ Liêm, Tp.Hà Nội</textarea>
+                                                            </div>
+                                                        </div>
+                                                        <!-- Dropdown thay đổi trạng thái của hóa đơn -->
+                                                        <div class="form-group row">
+                                                            <label for="order-status" class="col4 col-md-3 col-form-label font-weight-semibold">Trạng thái hóa đơn: </label>
+                                                            <div class="col-8 col-md-9">
+                                                                <select id="order-status" class="form-control">
+                                                                    <option value="chờ xác nhận">Chờ xác nhận</option>
+                                                                    <option value="đã xác nhận">Đã xác nhận</option>
+                                                                    <option value="đang giao">Đang giao</option>
+                                                                    <option value="hoàn thành">Hoàn thành</option>
+                                                                    <option value="đã hủy">Đã hủy</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </form>
                                                 </div>
                                             </div>
-                                            <div class="m-t-20">
-                                                <div class="table-responsive">
-                                                    <table class="table">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>STT</th>
-                                                                <th>Sản phẩm</th>
-                                                                <th>Số lượng</th>
-                                                                <th>Đơn giá</th>
-                                                                <th>Thành tiền</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <th>1</th>
-                                                                <td>Máy ảnh Nikon Z7 II Body + Ngàm chuyển Nikon FTZ II</td>
-                                                                <td>1</td>
-                                                                <td>63.270.000đ</td>
-                                                                <td>63.270.000đ</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th>2</th>
-                                                                <td>Máy ảnh Sony ZV-1 Mark II / ZV-1M2 Đen</td>
-                                                                <td>2</td>
-                                                                <td>8.900.000đ</td>
-                                                                <td>17.800.000đ</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th>3</th>
-                                                                <td>Máy ảnh OM System Tough TG-7 Đỏ</td>
-                                                                <td>1</td>
-                                                                <td>13.800.000đ</td>
-                                                                <td>13.800.000đ</td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                                <div class="row m-t-30 lh-1-8">
-                                                    <div class="col-sm-12">
-                                                        <div class="float-right text-right">
-                                                            <p>Tổng tiền sản phẩm: 94.870.000đ</p>
-                                                            <p>Phí vận chuyển : 50.000đ </p>
-                                                            <hr>
-                                                            <h3><span class="font-weight-semibold text-dark">Thành tiền :</span> 94.920.000đ</h3>
+                                            <!-- Add New Product Form -->
+                                            <div class="mt-4">
+                                                <h4>Thêm sản phẩm mới</h4>
+                                                <form id="add-product-form">
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-1">
+                                                            <label for="product-stt">STT</label>
+                                                            <input type="number" class="form-control" id="product-stt" placeholder="STT" required>
+                                                        </div>
+                                                        <div class="form-group col-md-4">
+                                                            <label for="product-name">Sản phẩm</label>
+                                                            <input type="text" class="form-control" id="product-name" placeholder="Tên sản phẩm" required>
+                                                        </div>
+                                                        <div class="form-group col-md-2">
+                                                            <label for="product-quantity">Số lượng</label>
+                                                            <input type="number" class="form-control" id="product-quantity" placeholder="Số lượng" required>
+                                                        </div>
+                                                        <div class="form-group col-md-2">
+                                                            <label for="product-price">Đơn giá</label>
+                                                            <input type="number" class="form-control" id="product-price" placeholder="Đơn giá" required>
+                                                        </div>
+                                                        <div class="form-group col-md-1">
+                                                            <button type="submit" class="btn" style="margin-top:29px"><i style="font-size:20px; line-height: none;" class="anticon anticon-plus-circle"></i></button>
                                                         </div>
                                                     </div>
+                                                </form>
+                                            </div>
+                                            <!-- Product Table -->
+                                            <div class="table-responsive mt-4">
+                                                <table class="table table-bordered text-center" id="product-table">
+                                                    <thead class="thead-light">
+                                                        <tr>
+                                                            <th>STT</th>
+                                                            <th>Sản phẩm</th>
+                                                            <th>Số lượng</th>
+                                                            <th>Đơn giá</th>
+                                                            <th>Thành tiền</th>
+                                                            <th>Thao tác</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>Máy ảnh Nikon Z7 II Body + Ngàm chuyển Nikon FTZ II</td>
+                                                            <td>1</td>
+                                                            <td>63.270.000đ</td>
+                                                            <td>63.270.000đ</td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-icon btn-hover btn-sm btn-rounded delete-product-btn">
+                                                                    <i class="anticon anticon-delete"></i>
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td>Máy ảnh Sony ZV-1 Mark II / ZV-1M2 Đen</td>
+                                                            <td>2</td>
+                                                            <td>8.900.000đ</td>
+                                                            <td>17.800.000đ</td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-icon btn-hover btn-sm btn-rounded delete-product-btn">
+                                                                    <i class="anticon anticon-delete"></i>
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>3</td>
+                                                            <td>Máy ảnh OM System Tough TG-7 Đỏ</td>
+                                                            <td>1</td>
+                                                            <td>13.800.000đ</td>
+                                                            <td>13.800.000đ</td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-icon btn-hover btn-sm btn-rounded delete-product-btn">
+                                                                    <i class="anticon anticon-delete"></i>
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!-- Total -->
+                                            <div class="row mt-4">
+                                                <div class="col-md-12 text-right">
+                                                    <p><strong>Tổng tiền sản phẩm:</strong> <span class="total-product-price">94.870.000đ</span></p>
+                                                    <p><strong>Phí vận chuyển:</strong> 50.000đ</p>
+                                                    <hr>
+                                                    <h3 class="text-danger"><strong>Thành tiền:</strong><span class="total-amount">94.920.000đ</span></h3>
                                                 </div>
-                                                <div class="row m-t-30 lh-2">
-                                                    <div class="col-sm-12">
-                                                        <div class="border-bottom p-v-20">
-                                                            <p class="text-opacity"><small>Quý khách vui lòng kiểm tra kỹ thông tin hóa đơn. Nếu có sai sót, xin liên hệ ngay với chúng tôi để được hỗ trợ.</small></p>
-                                                        </div>
-                                                    </div>
+                                            </div>
+                                            <!-- Footer -->
+                                            <div class="row mt-4 align-items-center">
+                                                <div class="col-6">
+                                                    <img src="assets/images/logo/logo.png" alt="Logo" class="img-fluid" style="max-width: 100px;">
                                                 </div>
-                                                <div class="row m-v-20">
-                                                    <div class="col-sm-6">
-                                                        <img class="img-fluid text-opacity m-t-5" width="100" src="assets/images/logo/logo.png" alt="">
-                                                    </div>
-                                                    <div class="col-sm-6 text-right">
-                                                        <small><span class="font-weight-semibold text-dark">Phone:</span>0999999999</small>
-                                                        <br>
-                                                        <small>support@minhhuong.com</small>
-                                                    </div>
+                                                <div class="col-6 text-right">
+                                                    <p><strong>Phone:</strong> 0879418764</p>
+                                                    <p>mihushop@gmail.com</p>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-3">
+                                                <div class="col-12">
+                                                    <p class="text-muted small">Quý khách vui lòng kiểm tra kỹ thông tin hóa đơn. Nếu có sai sót, xin liên hệ ngay với chúng tôi để được hỗ trợ.</p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Thoát</button>
+                                        <button type="button" class="btn btn-primary " data-dismiss="modal" onclick="showToast()">Lưu thay đổi</button>
+                                    </div>
+                                </div>                                                                
                             </div>
                         </div>
                     </div>
                 </div>
-
+                <!-- Modal thêm đơn hàng -->
+                <div class="modal fade them-don-hang">
+                    <div class="modal-dialog modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title h4">Thêm đơn hàng mới</h5>
+                                <button type="button" class="close" data-dismiss="modal">
+                                    <i class="anticon anticon-close"></i>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div id="invoice" class="p-3">
+                                            <!-- Header -->
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <h2>HÓA ĐƠN</h2>
+                                                <div>
+                                                    <div><span class="font-weight-bold">Mã Hóa Đơn:</span> #5331</div>
+                                                    <div><span class="font-weight-bold">Ngày:</span> 25/07/2024</div>
+                                                </div>
+                                            </div>
+                                            <!-- Customer Info -->
+                                            <div class="row mt-4">
+                                                <div class="col-md-9">
+                                                    <form>
+                                                        <div class="form-group row">
+                                                            <label for="namehd" class="col-4 col-md-3 col-form-label font-weight-semibold">Tên khách hàng:</label>
+                                                            <div class="col-8 col-md-9">
+                                                                <input type="text" class="form-control" id="namehd" placeholder="Nhập tên">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label for="phonehd" class="col-4 col-md-3 col-form-label font-weight-semibold">Số điện thoại:</label>
+                                                            <div class="col-8 col-md-9">
+                                                                <input type="number" class="form-control" id="phonehd" placeholder="Nhập số điện thoại">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <label for="address" class="col-4 col-md-3 col-form-label font-weight-semibold">Địa chỉ:</label>
+                                                            <div class="col-8 col-md-9">
+                                                                <textarea class="form-control" id="address" rows="4" placeholder="Nhập địa chỉ"></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <!-- Dropdown thay đổi trạng thái của hóa đơn -->
+                                                        <div class="form-group row">
+                                                            <label for="order-status" class="col4 col-md-3 col-form-label font-weight-semibold">Trạng thái hóa đơn: </label>
+                                                            <div class="col-8 col-md-9">
+                                                                <select id="order-status" class="form-control">
+                                                                    <option value="chờ xác nhận">Chờ xác nhận</option>
+                                                                    <option selected value="đã xác nhận">Đã xác nhận</option>
+                                                                    <option value="đang giao">Đang giao</option>
+                                                                    <option value="hoàn thành">Hoàn thành</option>
+                                                                    <option value="đã hủy">Đã hủy</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <!-- Add New Product Form -->
+                                            <div class="mt-4">
+                                                <h4>Thêm sản phẩm mới</h4>
+                                                <form id="add-product-form1">
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-1">
+                                                            <label for="product-stt1">STT</label>
+                                                            <input type="number" class="form-control" id="product-stt1" placeholder="STT" required>
+                                                        </div>
+                                                        <div class="form-group col-md-4">
+                                                            <label for="product-name1">Sản phẩm</label>
+                                                            <input type="text" class="form-control" id="product-name1" placeholder="Tên sản phẩm" required>
+                                                        </div>
+                                                        <div class="form-group col-md-2">
+                                                            <label for="product-quantity1">Số lượng</label>
+                                                            <input type="number" class="form-control" id="product-quantity1" placeholder="Số lượng" required>
+                                                        </div>
+                                                        <div class="form-group col-md-2">
+                                                            <label for="product-price1">Đơn giá</label>
+                                                            <input type="number" class="form-control" id="product-price1" placeholder="Đơn giá" required>
+                                                        </div>
+                                                        <div class="form-group col-md-1">
+                                                            <button type="submit" class="btn" style="margin-top:29px"><i style="font-size:20px; line-height: none;" class="anticon anticon-plus-circle"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <!-- Product Table -->
+                                            <div class="table-responsive mt-4">
+                                                <table class="table table-bordered text-center" id="product-table1">
+                                                    <thead class="thead-light">
+                                                        <tr>
+                                                            <th>STT</th>
+                                                            <th>Sản phẩm</th>
+                                                            <th>Số lượng</th>
+                                                            <th>Đơn giá</th>
+                                                            <th>Thành tiền</th>
+                                                            <th>Thao tác</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!-- Total -->
+                                            <div class="row mt-4">
+                                                <div class="col-md-12 text-right">
+                                                    <p><strong>Tổng tiền sản phẩm:</strong> <span class="total-product-price1">0đ</span></p>
+                                                    <p><strong>Phí vận chuyển:</strong> 50.000đ</p>
+                                                    <hr>
+                                                    <h3 class="text-danger"><strong>Thành tiền:</strong><span class="total-amount1">0đ</span></h3>
+                                                </div>
+                                            </div>
+                                            <!-- Footer -->
+                                            <div class="row mt-4 align-items-center">
+                                                <div class="col-6">
+                                                    <img src="assets/images/logo/logo.png" alt="Logo" class="img-fluid" style="max-width: 100px;">
+                                                </div>
+                                                <div class="col-6 text-right">
+                                                    <p><strong>Phone:</strong> 0879418764</p>
+                                                    <p>mihushop@gmail.com</p>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-3">
+                                                <div class="col-12">
+                                                    <p class="text-muted small">Quý khách vui lòng kiểm tra kỹ thông tin hóa đơn. Nếu có sai sót, xin liên hệ ngay với chúng tôi để được hỗ trợ.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Thoát</button>
+                                        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="showToastAdd()">Thêm đơn hàng</button>
+                                    </div>
+                                </div>                                                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="notification-toast top-right" id="notification-toast"></div>
                 <!-- Modal xoa tài khoản -->
                 <div class="modal fade" id="xoa-don-hang">
                     <div class="modal-dialog modal-dialog-centered">
@@ -793,8 +1286,8 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Thoát</button>
-                                <button type="button" class="btn btn-danger">Xóa</button>
-                            </div>
+                                <button  type="button" data-dismiss="modal" onclick="showToastDelete()" class="btn btn-danger">Xóa</button>
+                            </div> 
                         </div>
                     </div>
                 </div>
@@ -965,11 +1458,330 @@
     <!-- page js -->
     <script src="assets/vendors/datatables/jquery.dataTables.min.js"></script>
     <script src="assets/vendors/datatables/dataTables.bootstrap.min.js"></script>
+    <script src="assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
     <script src="assets/js/pages/e-commerce-order-list.js"></script>
 
     <!-- Core JS -->
     <script src="assets/js/app.min.js"></script>
 
+    <script>
+    $(document).ready(function () {        
+        $('.datepicker-input').datepicker({
+            format: 'dd/mm/yyyy', // Set the date format to DD/MM/YY
+            todayHighlight: true // Highlight today's date
+        });
+    });
+
+    // Wait for the DOM to load
+    document.addEventListener('DOMContentLoaded', function () {
+        const tableRows = document.querySelectorAll('tbody tr');
+        const statusButtons = document.querySelectorAll('.btn-tone');
+        console.log(tableRows);
+        console.log(statusButtons);
+        
+        // Function to filter table rows
+        function filterTableRows(status) {
+            tableRows.forEach(row => {
+                const rowStatus = row.querySelector('td:nth-child(6) div:last-child').innerText.trim();
+
+                if (status === 'Tất cả' || rowStatus === status) {
+                    row.style.display = ''; // Show the row
+                } else {
+                    row.style.display = 'none'; // Hide the row
+                }
+            });
+            console.log(status);
+        }
+
+        // Add event listeners to buttons
+        statusButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                // Get the status text from the button
+                const status = this.innerText.trim();
+
+                // Filter table rows based on the selected status
+                filterTableRows(status);
+            });
+        });
+
+        // Default to show all rows on page load
+        filterTableRows('Tất cả');
+    });
+
+    </script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const addProductForm = document.getElementById('add-product-form');
+    const productTableBody = document.querySelector('#product-table tbody');
+    const productSttInput = document.getElementById('product-stt');
+    const productNameInput = document.getElementById('product-name');
+    const productQuantityInput = document.getElementById('product-quantity');
+    const productPriceInput = document.getElementById('product-price');
+    const productTotalInput = document.getElementById('product-total');
+
+    const totalProductPriceElement = document.querySelector('.total-product-price'); // Tổng tiền sản phẩm
+    const shippingFeeElement = document.querySelector('.shipping-fee'); // Phí vận chuyển
+    const totalAmountElement = document.querySelector('.total-amount'); // Thành tiền
+
+    let totalProductPrice = 94870000; // Tổng tiền sản phẩm ban đầu
+    const shippingFee = 50000; // Phí vận chuyển
+
+    // Cập nhật tổng tiền sản phẩm và thành tiền
+    function updateTotalAmount() {
+        const totalAmount = totalProductPrice + shippingFee;
+        totalProductPriceElement.textContent = totalProductPrice.toLocaleString('vi-VN') + 'đ';
+        totalAmountElement.textContent = totalAmount.toLocaleString('vi-VN') + 'đ';
+    }
+
+    // Cập nhật thành tiền khi thay đổi số lượng hoặc đơn giá
+    function updateProductTotal() {
+        const quantity = parseInt(productQuantityInput.value) || 0;
+        const price = parseInt(productPriceInput.value.replace(/[^\d]/g, '')) || 0;
+        const total = quantity * price;
+        productTotalInput.value = total.toLocaleString('vi-VN') + 'đ';
+    }
+
+    // Thêm sản phẩm vào bảng và cập nhật tổng tiền
+    function addProductToTable(stt, name, quantity, price, total) {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${stt}</td>
+            <td>${name}</td>
+            <td>${quantity}</td>
+            <td>${price.toLocaleString('vi-VN')}đ</td>
+            <td>${total.toLocaleString('vi-VN')}đ</td>
+            <td><button class="btn btn-danger btn-sm delete-product-btn">Xóa</button></td>
+        `;
+        productTableBody.appendChild(row);
+
+        // Cập nhật tổng tiền sản phẩm
+        totalProductPrice += total;
+        updateTotalAmount();
+
+        // Lắng nghe sự kiện xóa sản phẩm
+        row.querySelector('.delete-product-btn').addEventListener('click', function () {
+            row.remove(); // Xóa dòng sản phẩm khỏi bảng
+
+            // Cập nhật lại tổng tiền sản phẩm
+            totalProductPrice -= total;
+            updateTotalAmount();
+        });
+    }
+
+    // Lắng nghe sự kiện submit của form
+    addProductForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const stt = productSttInput.value;
+        const name = productNameInput.value;
+        const quantity = parseInt(productQuantityInput.value) || 0;
+        const price = parseInt(productPriceInput.value.replace(/[^\d]/g, '')) || 0;
+        const total = quantity * price;
+
+        if (stt && name && quantity && price) {
+            addProductToTable(stt, name, quantity, price, total);
+
+            // Reset form sau khi thêm sản phẩm
+            addProductForm.reset();
+            productTotalInput.value = '';
+        } else {
+            alert('Vui lòng điền đầy đủ thông tin sản phẩm.');
+        }
+    });
+
+    // Cập nhật tổng tiền khi số lượng hoặc giá thay đổi
+    productQuantityInput.addEventListener('input', updateProductTotal);
+    productPriceInput.addEventListener('input', updateProductTotal);
+
+    // Lắng nghe sự kiện xóa cho tất cả các sản phẩm ban đầu
+    const deleteButtons = document.querySelectorAll('.delete-product-btn');
+    deleteButtons.forEach(button => {
+        button.addEventListener('click', function (e) {
+            const row = e.target.closest('tr');
+            const total = parseInt(row.cells[4].textContent.replace(/[^\d]/g, '')); // Lấy thành tiền của sản phẩm
+            row.remove(); // Xóa dòng sản phẩm khỏi bảng
+
+            // Cập nhật lại tổng tiền sản phẩm
+            totalProductPrice -= total;
+            updateTotalAmount();
+        });
+    });
+
+        // Cập nhật thành tiền khi tải trang lần đầu
+        updateTotalAmount();
+    });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        const addProductForm = document.getElementById('add-product-form1');
+        const productTableBody = document.querySelector('#product-table1 tbody');
+        const productSttInput = document.getElementById('product-stt1');
+        const productNameInput = document.getElementById('product-name1');
+        const productQuantityInput = document.getElementById('product-quantity1');
+        const productPriceInput = document.getElementById('product-price1');
+        const productTotalInput = document.getElementById('product-total1');
+    
+        const totalProductPriceElement = document.querySelector('.total-product-price1'); // Tổng tiền sản phẩm
+        const shippingFeeElement = document.querySelector('.shipping-fee1'); // Phí vận chuyển
+        const totalAmountElement = document.querySelector('.total-amount1'); // Thành tiền
+    
+        let totalProductPrice = 0; // Tổng tiền sản phẩm ban đầu
+        const shippingFee = 50000; // Phí vận chuyển
+    
+        // Cập nhật tổng tiền sản phẩm và thành tiền
+        function updateTotalAmount() {
+            const totalAmount = totalProductPrice + shippingFee;
+            totalProductPriceElement.textContent = totalProductPrice.toLocaleString('vi-VN') + 'đ';
+            totalAmountElement.textContent = totalAmount.toLocaleString('vi-VN') + 'đ';
+        }
+    
+        // Cập nhật thành tiền khi thay đổi số lượng hoặc đơn giá
+        function updateProductTotal() {
+            const quantity = parseInt(productQuantityInput.value) || 0;
+            const price = parseInt(productPriceInput.value.replace(/[^\d]/g, '')) || 0;
+            const total = quantity * price;
+            productTotalInput.value = total.toLocaleString('vi-VN') + 'đ';
+        }
+    
+        // Thêm sản phẩm vào bảng và cập nhật tổng tiền
+        function addProductToTable(stt, name, quantity, price, total) {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${stt}</td>
+                <td>${name}</td>
+                <td>${quantity}</td>
+                <td>${price.toLocaleString('vi-VN')}đ</td>
+                <td>${total.toLocaleString('vi-VN')}đ</td>
+                <td><button class="btn btn-danger btn-sm delete-product-btn1">Xóa</button></td>
+            `;
+            productTableBody.appendChild(row);
+    
+            // Cập nhật tổng tiền sản phẩm
+            totalProductPrice += total;
+            updateTotalAmount();
+    
+            // Lắng nghe sự kiện xóa sản phẩm
+            row.querySelector('.delete-product-btn1').addEventListener('click', function () {
+                row.remove(); // Xóa dòng sản phẩm khỏi bảng
+    
+                // Cập nhật lại tổng tiền sản phẩm
+                totalProductPrice -= total;
+                updateTotalAmount();
+            });
+        }
+    
+        // Lắng nghe sự kiện submit của form
+        addProductForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+    
+            const stt = productSttInput.value;
+            const name = productNameInput.value;
+            const quantity = parseInt(productQuantityInput.value) || 0;
+            const price = parseInt(productPriceInput.value.replace(/[^\d]/g, '')) || 0;
+            const total = quantity * price;
+    
+            if (stt && name && quantity && price) {
+                addProductToTable(stt, name, quantity, price, total);
+    
+                // Reset form sau khi thêm sản phẩm
+                addProductForm.reset();
+                productTotalInput.value = '';
+            } else {
+                alert('Vui lòng điền đầy đủ thông tin sản phẩm.');
+            }
+        });
+    
+        // Cập nhật tổng tiền khi số lượng hoặc giá thay đổi
+        productQuantityInput.addEventListener('input', updateProductTotal);
+        productPriceInput.addEventListener('input', updateProductTotal);
+    
+        // Lắng nghe sự kiện xóa cho tất cả các sản phẩm ban đầu
+        const deleteButtons = document.querySelectorAll('.delete-product-btn');
+        deleteButtons.forEach(button => {
+            button.addEventListener('click', function (e) {
+                const row = e.target.closest('tr');
+                const total = parseInt(row.cells[4].textContent.replace(/[^\d]/g, '')); // Lấy thành tiền của sản phẩm
+                row.remove(); // Xóa dòng sản phẩm khỏi bảng
+    
+                // Cập nhật lại tổng tiền sản phẩm
+                totalProductPrice -= total;
+                updateTotalAmount();
+            });
+        });
+    
+            // Cập nhật thành tiền khi tải trang lần đầu
+            updateTotalAmount();
+        });
+        </script>
+
+    <script>
+    function showToast() {
+        var toastHTML = `<div class="toast fade hide" data-delay="3000">
+            <div class="toast-header">
+                <i class="anticon anticon-info-circle text-primary m-r-5"></i>
+                <strong class="mr-auto">Thông báo</strong>
+                <small>now</small>
+                <button type="button" class="ml-2 close" data-dismiss="toast" aria-label="Thoát">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="toast-body">
+                Cập nhật thông tin hóa đơn thành công!
+            </div>
+        </div>`
+
+        $('#notification-toast').append(toastHTML)
+        $('#notification-toast .toast').toast('show');
+        setTimeout(function(){ 
+            $('#notification-toast .toast:first-child').remove();
+        }, 3000);
+    }
+    function showToastAdd() {
+        var toastHTML = `<div class="toast fade hide" data-delay="3000">
+            <div class="toast-header">
+                <i class="anticon anticon-info-circle text-primary m-r-5"></i>
+                <strong class="mr-auto">Thông báo</strong>
+                <small>now</small>
+                <button type="button" class="ml-2 close" data-dismiss="toast" aria-label="Thoát">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="toast-body">
+               Thêm mới hóa đơn thành công!
+            </div>
+        </div>`
+
+        $('#notification-toast').append(toastHTML)
+        $('#notification-toast .toast').toast('show');
+        setTimeout(function(){ 
+            $('#notification-toast .toast:first-child').remove();
+        }, 3000);
+    }
+    function showToastDelete() {
+        var toastHTML = `<div class="toast fade hide" data-delay="3000">
+            <div class="toast-header">
+                <i class="anticon anticon-info-circle text-primary m-r-5"></i>
+                <strong class="mr-auto">Thông báo</strong>
+                <small>now</small>
+                <button type="button" class="ml-2 close" data-dismiss="toast" aria-label="Thoát">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="toast-body">
+                Xóa hóa đơn thành công!
+            </div>
+        </div>`
+
+        $('#notification-toast').append(toastHTML)
+        $('#notification-toast .toast').toast('show');
+        setTimeout(function(){ 
+            $('#notification-toast .toast:first-child').remove();
+        }, 3000);
+    }
+    </script>
+
+    
 </body>
 
 </html>
