@@ -2576,7 +2576,7 @@ only screen and (max-width: 767px) {
     color: #fff;
     content: "MENU";
     font-size: 20px;
-    right: 40px;
+    left: 0px;
     position: absolute;
     top: -34px;
 }
@@ -2590,7 +2590,7 @@ only screen and (max-width: 767px) {
 @media only screen and (max-width: 767px) {
     .mean-4 .mean-bar::after {
         right: 30px;
-        left: auto;
+        left: 0;
     }
 }
 
@@ -3109,13 +3109,13 @@ only screen and (min-width: 768px) and (max-width: 991px) {
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .hero__4 .single-slider {
-        height: 400px;
+        height: 340px;
     }
 }
 
 @media only screen and (max-width: 767px) {
     .hero__4 .single-slider {
-        height: 300px;
+        height: 140px;
     }
 }
 
