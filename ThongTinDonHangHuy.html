@@ -2,8 +2,6 @@
 <html class="no-js" lang="en">
 
 
-
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +9,7 @@
     <meta name="description" content="meta description">
 
     <!-- Site title -->
-    <title>Liên hệ</title>
+    <title>Chi tiết đơn</title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" />
     <!-- Bootstrap CSS -->
@@ -28,7 +26,6 @@
 </head>
 
 <body>
-
     <!-- color switcher start -->
     <div class="color-switcher">
         <div class="color-switcher-inner">
@@ -241,7 +238,7 @@
                                         <ul>
                                             <li><a href="TrangChu.html"><i class="fa fa-home"></i>Trang Chủ </a></li>
                                             <li><a href="BaiViet.html">Bài viết</a></li>
-                                            <li class="active"><a href="LienHe.html">Liên hệ</a></li>
+                                            <li><a href="LienHe.html">Liên hệ</a></li>
                                             <li><a href="GioiThieu.html">Giới thiệu</a></li>
                                             <li><a href="#">máy ảnh <i class="fa fa-angle-down"></i></a>
                                                 <ul class="dropdown">
@@ -343,8 +340,9 @@
                         <div class="breadcrumb-wrap">
                             <nav aria-label="breadcrumb">
                                 <ul class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="TrangChu.html">Trang chủ</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">liên hệ</li>
+                                    <li class="breadcrumb-item"><a href="TrangChu.html">Trang Chủ</a></li>
+                                    <li class="breadcrumb-item"><a href="TaiKhoan.html">Tài khoản</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Thông tin đơn hàng</li>
                                 </ul>
                             </nav>
                         </div>
@@ -354,69 +352,114 @@
         </div>
         <!-- breadcrumb area end -->
 
-        <!-- contact area start -->
-        <div class="contact-area pb-34 pb-md-18 pb-sm-0">
+        <!-- cart main wrapper start -->
+        <div class="cart-main-wrapper">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6">
-                        <div class="contact-message">
-                            <h2>Cho chúng tôi biết thông tin của bạn</h2>
-                            <form id="contact-form" action="http://demo.hasthemes.com/galio-v6/galio/assets/php/mail.php" method="post" class="contact-form">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-sm-6">
-                                        <input name="first_name" placeholder="Tên *" type="text" required>    
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6">
-                                        <input name="phone" placeholder="Số điện thoại *" type="text" required>   
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6">
-                                        <input name="email_address" placeholder="Email *" type="text" required>    
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6">
-                                        <input name="contact_subject" placeholder="Tiêu đề *" type="text">   
-                                    </div>
-                                <div class="col-12">
-                                        <div class="contact2-textarea text-center">
-                                            <textarea placeholder="Nội dung tin nhắn *" name="message"  class="form-control2" required=""></textarea>     
-                                        </div>   
-                                        <div class="contact-btn">
-                                            <button class="sqr-btn" type="submit">Gửi yêu cầu</button> 
-                                        </div> 
-                                    </div> 
-                                    <div class="col-12 d-flex justify-content-center">
-                                        <p class="form-messege"></p>
-                                    </div>
-                                </div>
-                            </form>    
-                        </div> 
+                    <div class="col-lg-12">
+                        <!-- Cart Table Area -->
+                        <div class="cart-table table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th class="pro-thumbnail">Hình ảnh</th>
+                                    <th class="pro-title">Tên sản phẩm</th>
+                                    <th class="pro-price">Giá</th>
+                                    <th class="pro-quantity">Số lượng</th>
+                                    <th class="pro-subtotal">Thành tiền</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="pro-thumbnail"><a href="#"><img class="img-fluid" src="assets/img/product/fujiminipink-1.jpg"
+                                                                                alt="Product"/></a></td>
+                                    <td class="pro-title"><a href="#">Máy ảnh Fujifilm Instax Mini 12 Mint Green</a></td>
+                                    <td class="pro-price"><span>2.080.000đ</span></td>
+                                    <td class="pro-quantity"><span>1</span></td>
+                                    <td class="pro-subtotal"><span>2.080.000đ</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="pro-thumbnail"><a href="#"><img class="img-fluid" src="assets/img/product/canoneos-1.jpg"
+                                                                                alt="Product"/></a></td>
+                                    <td class="pro-title"><a href="#">Máy ảnh Canon EOS RP Kit RF24-105mm F4 L IS USM</a></td>
+                                    <td class="pro-price"><span>43.800.000đ</span></td>
+                                    <td class="pro-quantity"><span>1</span></td>
+                                    <td class="pro-subtotal"><span>43.800.000đ</span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="contact-info mt-md-28 mt-sm-28">
-                            <h2>Liên hệ với chúng tôi</h2>
-                            <p>Nếu bạn có bất kỳ câu hỏi, yêu cầu hỗ trợ hoặc cần thêm thông tin, vui lòng liên hệ với chúng tôi qua các phương thức sau:</p>
-                            <ul>
-                                <li><i class="fa fa-fax"></i> Địa chỉ : 328 Bùi Xương Trạch - Định Công.</li>
-                                <li><i class="fa fa-envelope-o"></i>support@mihushop.com</li>
-                                <li><i class="fa fa-phone"></i> 0879418764</li>
-                            </ul>
-                            <div class="working-time">
-                                <h3>Thời gian làm việc</h3>
-                                <p><span>Thứ hai – Chủ nhật:</span>08AM – 22PM</p>
+                </div>
+        
+                <div class="row">
+                    <div class="col-lg-5 ml-auto">
+                        <!-- Cart Calculation Area -->
+                        <div class="cart-calculator-wrapper">
+                            <div class="cart-calculate-items">
+                                <h3>Tổng cộng</h3>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <tr>
+                                            <td>Tạm tính</td>
+                                            <td>45.880.000đ</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Phí vận chuyển</td>
+                                            <td>50.000đ</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mã giảm phí vận chuyển</td>
+                                            <td>-50.000đ</td>
+                                        </tr>
+                                        <tr class="total">
+                                            <td>Thành tiền</td>
+                                            <td class="total-amount">45.880.000đ</td>
+                                        </tr>
+                                    </table>
+                                </div>
                             </div>
+                        </div>
+                        <div class="d-block d-md-flex justify-content-end" style="margin-top:20px">
+                            <button data-toggle="modal" data-target="#quick_view" class="sqr-btn" style="background-color: rgb(240, 240, 240) !important; color:black; margin-right:20px"><a>Hủy đơn hàng</a></button>
+                            <a href="TaiKhoan.html" class="sqr-btn">Quay lại</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- contact area end -->
+        <!-- cart main wrapper end -->
 
-        <!-- map area start -->
-        <div class="map-area-wrapper">
-            <div class="container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1792.27051616561!2d105.8301224545339!3d20.98191538421861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac5f17bd8c43%3A0x665ed8e8059205c3!2zOTYgUC4gxJDhu4tuaCBDw7RuZywgxJDhu4tuaCBDw7RuZywgSG_DoG5nIE1haSwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1727965286797!5m2!1svi!2s" width="1170" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <!-- Quick view modal start -->
+        <div class="modal" id="quick_view">
+            <div class="modal-dialog modal-sm modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- product details inner end -->
+                        <div class="product-details-inner">
+                            <div class="col-lg-12">
+                                <div class="product-details-des mt-md-34 mt-sm-34">
+                                    <h3><a href="#">Bạn có chắc chắn muốn hủy đơn hàng này?</a></h3>
+                                    <div class="quantity-cart-box d-flex justify-content-center mt-20">
+                                        <div class="action_link" style="margin-right:20px">
+                                            <button class="sqr-btn" data-dismiss="modal" style="background-color: rgb(240, 240, 240) !important; color:black; margin-right:20px">Không</butt>
+                                        </div>
+                                        <div class="action_link">
+                                            <a href="HuyDon.html" class="sqr-btn">Có</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- product details inner end -->
+                    </div>
+                </div>
             </div>
         </div>
-        <!-- map area end -->
+        <!-- Quick view modal end -->
 
         <!-- brand area start -->
         <div class="brand-area pt-34 pb-30">
@@ -590,7 +633,6 @@
         <i class="fa fa-angle-up"></i>
     </div>
     <!-- Scroll to Top End -->
-
 
 
     <!--All jQuery, Third Party Plugins & Activation (main.js) Files-->

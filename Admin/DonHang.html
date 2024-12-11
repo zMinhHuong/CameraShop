@@ -15,9 +15,36 @@
 
     <!-- Core css -->
     <link href="assets/css/app.min.css" rel="stylesheet">
+    <style>
+        .danger {
+            color: #de4436;
+        }
 
+        .info {
+            color: #02d3ef;
+        }
+
+        .success {
+            color: #00c9a7;
+        }
+
+        .secondary {
+            color: #886cff;
+        }
+
+        .warning {
+            color: #ffc107;
+        }
+
+        /* .canphai {
+            display: block;
+            text-align: right;
+            padding-right: 65px !important;
+            margin-left: -85px !important;
+        } */
+    </style>
 </head>
-
+    
 <body>
     <div class="app">
         <div class="layout">
@@ -347,7 +374,7 @@
                                             <th>ID</th>
                                             <th>Khách hàng</th>
                                             <th>Ngày đặt</th>
-                                            <th>Tổng tiền</th>
+                                            <th class="canphai">Tổng tiền</th>
                                             <th>Trạng thái</th>
                                             <th>Thao tác</th>
                                             <th></th>
@@ -373,11 +400,11 @@
                                                 </div>
                                             </td>
                                             <td>16/11/2024</td>
-                                            <td>8.020.000đ</td>
+                                            <td class="canphai">8.020.000đ</td>
                                             <td>
                                                 <div class="d-flex align-items-center">
                                                     <div class="badge badge-secondary badge-dot m-r-10"></div>
-                                                    <div>Chờ xác nhận</div>
+                                                    <div class="secondary">Chờ xác nhận</div>
                                                 </div>
                                             </td>
                                             <td>
@@ -410,11 +437,11 @@
                                                 </div>
                                             </td>
                                             <td>05/09/2024</td>
-                                            <td>68.599.000đ</td>
+                                            <td class="canphai">68.599.000đ</td>
                                             <td>
                                                 <div class="d-flex align-items-center">
                                                     <div class="badge badge-secondary badge-dot m-r-10"></div>
-                                                    <div>Chờ xác nhận</div>
+                                                    <div class="secondary">Chờ xác nhận</div>
                                                 </div>
                                             </td>
                                             <td>
@@ -447,11 +474,11 @@
                                                 </div>
                                             </td>
                                             <td>15/12/2024</td>
-                                            <td>4.000.000đ</td>
+                                            <td class="canphai">4.000.000đ</td>
                                             <td>
                                                 <div class="d-flex align-items-center">
                                                     <div class="badge badge-secondary badge-dot m-r-10"></div>
-                                                    <div>Chờ xác nhận</div>
+                                                    <div class="secondary">Chờ xác nhận</div>
                                                 </div>
                                             </td>
                                             <td>
@@ -484,11 +511,11 @@
                                                 </div>
                                             </td>
                                             <td>10/12/2024</td>
-                                            <td>2.530.000đ</td>
+                                            <td class="canphai">2.530.000đ</td>
                                             <td>
                                                 <div class="d-flex align-items-center">
                                                     <div class="badge badge-secondary badge-dot m-r-10"></div>
-                                                    <div>Chờ xác nhận</div>
+                                                    <div class="secondary">Chờ xác nhận</div>
                                                 </div>
                                             </td>
                                             <td>
@@ -521,11 +548,11 @@
                                                 </div>
                                             </td>
                                             <td>20/11/2024</td>
-                                            <td>8.999.000đ</td>
+                                            <td class="canphai">8.999.000đ</td>
                                             <td>
                                                 <div class="d-flex align-items-center">
                                                     <div class="badge badge-info badge-dot m-r-10"></div>
-                                                    <div>Đã xác nhận</div>
+                                                    <div class="info">Đã xác nhận</div>
                                                 </div>
                                             </td>
                                             <td>
@@ -558,11 +585,11 @@
                                                 </div>
                                             </td>
                                             <td>10/12/2024</td>
-                                            <td>12.000.000đ</td>
+                                            <td class="canphai">12.000.000đ</td>
                                             <td>
                                                 <div class="d-flex align-items-center">
                                                     <div class="badge badge-info badge-dot m-r-10"></div>
-                                                    <div>Đã xác nhận</div>
+                                                    <div class="info">Đã xác nhận</div>
                                                 </div>
                                             </td>
                                             <td>
@@ -595,11 +622,11 @@
                                                 </div>
                                             </td>
                                             <td>10/12/2024</td>
-                                            <td>44.440.000đ</td>
+                                            <td class="canphai">44.440.000đ</td>
                                             <td>
                                                 <div class="d-flex align-items-center">
                                                     <div class="badge badge-warning badge-dot m-r-10"></div>
-                                                    <div>Đang giao</div>
+                                                    <div class="warning">Đang giao</div>
                                                 </div>
                                             </td>
                                             <td>
@@ -632,11 +659,11 @@
                                                 </div>
                                             </td>
                                             <td>10/12/2024</td>
-                                            <td>19.129.000đ</td>
+                                            <td class="canphai">19.129.000đ</td>
                                             <td>
                                                 <div class="d-flex align-items-center">
                                                     <div class="badge badge-warning badge-dot m-r-10"></div>
-                                                    <div>Đang giao</div>
+                                                    <div class="warning">Đang giao</div>
                                                 </div>
                                             </td>
                                             <td>
@@ -669,11 +696,11 @@
                                                 </div>
                                             </td>
                                             <td>12/08/2024</td>
-                                            <td>15.600.000đ</td>
+                                            <td class="canphai">15.600.000đ</td>
                                             <td>
                                                 <div class="d-flex align-items-center">
                                                     <div class="badge badge-success badge-dot m-r-10"></div>
-                                                    <div>Hoàn thành</div>
+                                                    <div class="success">Hoàn thành</div>
                                                 </div>
                                             </td>
                                             <td>
@@ -706,11 +733,11 @@
                                                 </div>
                                             </td>
                                             <td>15/08/2024</td>
-                                            <td>46.500.000đ</td>
+                                            <td class="canphai">46.500.000đ</td>
                                             <td>
                                                 <div class="d-flex align-items-center">
                                                     <div class="badge badge-success badge-dot m-r-10"></div>
-                                                    <div>Hoàn thành</div>
+                                                    <div class="success">Hoàn thành</div>
                                                 </div>
                                             </td>
                                             <td>
@@ -743,11 +770,11 @@
                                                 </div>
                                             </td>
                                             <td>05/09/2024</td>
-                                            <td>54.300.000đ</td>
+                                            <td class="canphai">54.300.000đ</td>
                                             <td>
                                                 <div class="d-flex align-items-center">
                                                     <div class="badge badge-success badge-dot m-r-10"></div>
-                                                    <div>Hoàn thành</div>
+                                                    <div class="success">Hoàn thành</div>
                                                 </div>
                                             </td>
                                             <td>
@@ -780,11 +807,11 @@
                                                 </div>
                                             </td>
                                             <td>28/09/2024</td>
-                                            <td>24.100.000đ</td>
+                                            <td class="canphai">24.100.000đ</td>
                                             <td>
                                                 <div class="d-flex align-items-center">
                                                     <div class="badge badge-success badge-dot m-r-10"></div>
-                                                    <div>Hoàn thành</div>
+                                                    <div class="success">Hoàn thành</div>
                                                 </div>
                                             </td>
                                             <td>
@@ -817,11 +844,11 @@
                                                 </div>
                                             </td>
                                             <td>18/10/2024</td>
-                                            <td>72.800.000</td>
+                                            <td class="canphai">72.800.000</td>
                                             <td>
                                                 <div class="d-flex align-items-center">
                                                     <div class="badge badge-success badge-dot m-r-10"></div>
-                                                    <div>Hoàn thành</div>
+                                                    <div class="success">Hoàn thành</div>
                                                 </div>
                                             </td>
                                             <td>
@@ -854,11 +881,11 @@
                                                 </div>
                                             </td>
                                             <td>12/11/2024</td>
-                                            <td>112.000.000đ</td>
+                                            <td class="canphai">112.000.000đ</td>
                                             <td>
                                                 <div class="d-flex align-items-center">
                                                     <div class="badge badge-success badge-dot m-r-10"></div>
-                                                    <div>Hoàn thành</div>
+                                                    <div  class="success">Hoàn thành</div>
                                                 </div>
                                             </td>
                                             <td>
@@ -891,11 +918,11 @@
                                                 </div>
                                             </td>
                                             <td>10/12/2024</td>
-                                            <td>132.000.000đ</td>
+                                            <td class="canphai">132.000.000đ</td>
                                             <td>
                                                 <div class="d-flex align-items-center">
                                                     <div class="badge badge-success badge-dot m-r-10"></div>
-                                                    <div>Hoàn thành</div>
+                                                    <div class="success">Hoàn thành</div>
                                                 </div>
                                             </td>
                                             <td>
@@ -928,11 +955,11 @@
                                                 </div>
                                             </td>
                                             <td>19/10/2024</td>
-                                            <td>87.200.000đ</td>
+                                            <td class="canphai">87.200.000đ</td>
                                             <td>
                                                 <div class="d-flex align-items-center">
                                                     <div class="badge badge-danger badge-dot m-r-10"></div>
-                                                    <div>Đã hủy</div>
+                                                    <div class="danger">Đã hủy</div>
                                                 </div>
                                             </td>
                                             <td>
